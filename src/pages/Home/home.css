@@ -1,0 +1,13 @@
+.home{
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header, .presentation, .skills {
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+/* ::-webkit-scrollbar{
+    display: none;
+} */

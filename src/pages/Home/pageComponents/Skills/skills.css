@@ -1,0 +1,10 @@
+.skills{
+    height: 100vh;
+    background-color: brown;
+    transition: width 4s;
+}
+
+.skills p{
+    text-align: center;
+    transition: transform 4s;
+}

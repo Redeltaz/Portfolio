@@ -1,0 +1,9 @@
+.presentation{
+    height: 100vh;
+    background-color: grey;
+}
+
+.presentation p{
+    text-align: center;
+    transition: transform 4s;
+}

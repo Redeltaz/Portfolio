@@ -1,0 +1,32 @@
+.navbar{
+    background-color: rgba(0, 0, 0, 0.596);
+    transition: transform 1s;
+    position: absolute;
+    width: 100%;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar nav{
+    padding: 20px 0;
+}
+
+.navbar ul a{
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.navbar ul li{
+    color: white;
+    font-size: 1.5em;
+}
+
+.underline{
+    height: 2px;
+    width: 0px;
+    background-color: white;
+    transition: width 0.6s;
+}
