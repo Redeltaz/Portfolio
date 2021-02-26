@@ -42,13 +42,13 @@ export class Navbar extends Component {
     render (){
         return <Router>
             <div className="navbar">
-                <nav>
+                {/* <nav>
                     <ul>
                         <Link to="/"><NavElement>Home</NavElement></Link>
                         <Link to="/about"><NavElement>About</NavElement></Link>
                         <Link to="/contact"><NavElement>Contact</NavElement></Link>
                     </ul>
-                </nav>
+                </nav> */}
             </div>
             <Route path="/" exact component={Home} />
             <Route path="/about" component={About} />

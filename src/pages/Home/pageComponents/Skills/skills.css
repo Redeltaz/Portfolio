@@ -1,10 +1,12 @@
 .skills{
-    height: 100vh;
-    background-color: brown;
-    transition: width 4s;
 }
 
 .skills p{
     text-align: center;
     transition: transform 4s;
+    transform: translateX(200px);
+}
+
+.active .skillsContent{
+    transform: translateX(0px);
 }

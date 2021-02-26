@@ -1,4 +1,4 @@
-import {Component, useState, useEffect} from 'react'
+import {useState, useEffect} from 'react'
 import {useInView} from 'react-intersection-observer'
 import './header.css'
 
@@ -14,8 +14,10 @@ export function Header(props){
 
     useEffect(() => {
         if(inView){
-            setNameCss({transform: 'translateY(0px)', opacity: '1'})
-            setJobCss({transform: 'translateY(0px)', opacity: '1'})
+            requestAnimationFrame(() => {
+                setNameCss({transform: 'translateY(0px)', opacity: '1'})
+                setJobCss({transform: 'translateY(0px)', opacity: '1'})
+            })
 
             setTimeout(() => {
                 setLineWidth({width: '100%'})
@@ -30,7 +32,7 @@ export function Header(props){
     }, [inView])
     
     return (
-        <header ref={ref}>
+        <header ref={ref} className="section">
             <div className="headerContent">
                 <p style={nameCss}>LUCAS CAMPISTRON</p>
                 <div className="middleLine" >

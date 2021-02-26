@@ -5,7 +5,17 @@
 
 header, .presentation, .skills {
     height: 100vh;
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
+}
+
+.section1{
+    height: 100vh;
+    background-color: aqua;
+}
+
+.section2{
+    height: 100vh;
+    background-color: blue;
 }
 
 /* ::-webkit-scrollbar{

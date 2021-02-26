@@ -6,10 +6,5 @@
 body{
     font-family: 'Montserrat', sans-serif;
     scroll-snap-type: y mandatory;
-}
-
-html{
-    scroll-snap-type: mandatory;
-    scroll-snap-points-y: repeat(100vh);
-    scroll-snap-type: y mandatory;
+    position: relative;
 }

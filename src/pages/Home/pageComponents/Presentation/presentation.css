@@ -1,9 +1,10 @@
-.presentation{
+.presentationContent{
     height: 100vh;
-    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.presentation p{
-    text-align: center;
-    transition: transform 4s;
+.right{
+    color: white;
 }
