@@ -5,6 +5,86 @@
     align-items: center;
 }
 
-.right{
+.presentationContent .right{
+    flex-basis: 50%;
     color: white;
+    text-align: right;
+    margin-right: 60px;
+    display: flex;
+    margin-top: 275px;
+}
+
+.presentationContent .rightContent{
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: 2.5s; 
+    margin-right: 20px;
+}
+
+.presentationContent .left{
+    flex-basis: 50%;
+    margin-left: 125px;
+    margin-top: -250px;
+    transform: translateX(100px);
+    opacity: 0;
+    transition: 2.5s;
+}
+
+.presentationContent .arguments{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 10px 80px;
+}
+
+.presentationContent .leftContent{
+    font-size: 3em;
+    color: white
+}
+
+.presentationContent .rightContent p{
+    margin-top: 40px;
+}
+
+.presentationContent .rightLine{
+    transform: scaleY(0);
+    width: 15px;
+    background-color: #FC802D;
+    transition: 2.5s;
+}
+
+.leftContent .arguments div{
+    display: flex;
+}
+
+.leftContent .arguments div .blink{
+    width: 3px;
+    background-color: #FC802D;
+    margin-left: 10px;
+    animation: blink 1s step-end infinite;
+}
+
+/* animation */
+
+.active .presentationContent .rightContent{
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.active .presentationContent .left{
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.active .presentationContent .rightLine{
+    transform: scaleY(1);
+}
+
+@keyframes blink {
+    from,
+    to {
+        background-color: transparent;
+    }
+    50% {
+        background-color: #FC802D;
+    }
 }

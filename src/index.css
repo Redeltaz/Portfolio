@@ -6,5 +6,21 @@
 body{
     font-family: 'Montserrat', sans-serif;
     scroll-snap-type: y mandatory;
-    position: relative;
+}
+
+p::selection{
+    color: #FC802D;
+}
+
+h1::selection{
+    color: #FC802D;
+}
+
+h2::selection{
+    color: #FC802D;
+}
+
+.main{
+    background-size: cover;
+    background-attachment: fixed;
 }
