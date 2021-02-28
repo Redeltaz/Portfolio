@@ -50,7 +50,7 @@ export function Skills(){
                 <div className="secondSkills">
                     <Logo logoName={angularLogo} logoAlt="logo angular" name="Angular"/>
                     <Logo logoName={laravelLogo} logoAlt="logo laravel" name="Laravel"/>
-                    <Logo logoName={linuxLogo} logoAlt="logo linux" name="Linux (Ubuntu)"/>
+                    <Logo logoName={linuxLogo} logoAlt="logo linux" name="Linux"/>
                     <br />
                     <Logo logoName={sassLogo} logoAlt="logo sass" name="Sass"/>
                     <Logo logoName={mongodb} logoAlt="logo mongodatabase" name="MongoDB"/>

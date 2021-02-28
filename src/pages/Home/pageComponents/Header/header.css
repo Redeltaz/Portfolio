@@ -16,15 +16,18 @@ header .headerContent{
 }
 
 .headerContent p:first-child{
-    font-size: 3em;
-    margin-bottom: 40px;
+    font-size: 3.5em;
     transition: 2s;
 }
 
 .headerContent p:last-child{
     font-size: 1.5em;
-    margin-top: 40px;
     transition: 2s;
+}
+
+.middleLine{
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 
 .middleLine .line{
@@ -41,4 +44,10 @@ header .headerContent{
     background-color: #FC802D;
     margin: -14px auto 0 auto;
     transition: 1s;
+}
+
+@media (max-width: 400px) {
+    .headerContent p:first-child{
+        font-size: 3em;
+    }
 }

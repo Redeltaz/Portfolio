@@ -3,8 +3,8 @@ import './presentation.css'
 export function HelloWorld(){
     return(
         <div className="left">
-            <p className="leftContent">
-                {'<HelloWorld'} 
+            <div className="leftContent">
+                <p>{'<HelloWorld'}</p>
                 <span className="arguments">
                     <p>fullName = "Lucas.C"</p>
                     <p>age = 19</p>
@@ -14,8 +14,8 @@ export function HelloWorld(){
                         <div className="blink"></div>
                     </div>
                 </span>
-                {'/>'}
-            </p>
+                <p>{'/>'}</p>
+            </div>
         </div>
     )
 }

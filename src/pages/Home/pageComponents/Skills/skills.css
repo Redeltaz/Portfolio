@@ -91,3 +91,23 @@
     transform: translateX(0px);
     opacity: 1;
 }
+
+@media (max-width: 800px) {
+    .logo img{
+        width: 80px;
+    }
+
+    .skills .mainSkills, .skills .secondSkills{
+        width: auto;
+    }
+}
+
+@media (max-width: 800px) {
+    .logo img{
+        width: 60px;
+    }
+
+    .skills .mainSkills, .skills .secondSkills{
+        margin: 0 20px;
+    }
+}

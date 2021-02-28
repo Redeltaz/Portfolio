@@ -20,7 +20,12 @@ export function Header(props){
             })
 
             setTimeout(() => {
-                setLineWidth({width: '100%'})
+                if(window.screen.width >= 600){
+                    setLineWidth({width: '100%'})
+                }else{
+                    setLineWidth({width: '80%'})
+                }
+                
                 setsquareOpacity({opacity: '1', transform: 'rotate(45deg)'})
             }, 1300)
         }else{
