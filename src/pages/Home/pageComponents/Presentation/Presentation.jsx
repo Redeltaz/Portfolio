@@ -1,16 +1,51 @@
 import './presentation.css'
+import {useInView} from 'react-intersection-observer'
+import { useEffect, useState } from 'react'
 
-export function HelloWorld(){
+export function AboutMe(){
+    const [text, setText] = useState("")
+    const [ref, inView] = useInView({
+        threshold: 0.6
+    })
+
+    let index = 0
+    let completText = "sMotivated = true"
+    let onWrite;
+
+    function random(min, max){
+        return Math.floor(Math.random() * (max - min) + min)
+    }
+
+    function play(){
+        setText(completText.slice(0, index))
+
+        index++
+
+        if(index > completText.length){
+            clearInterval(onWrite)
+            return false;
+        }
+
+        clearInterval(onWrite)
+        onWrite = setInterval(play, random(50,300))
+    }
+
+    useEffect(() => {
+        if(inView){
+            onWrite = setInterval(play, 300)
+        }
+    }, [inView])
+
     return(
-        <div className="left">
+        <div className="left" ref={ref}>
             <div className="leftContent">
-                <p>{'<HelloWorld'}</p>
+                <p>{'<AboutMe'}</p>
                 <span className="arguments">
                     <p>fullName = "Lucas.C"</p>
                     <p>age = 19</p>
                     <p>passion = "javascript"</p>
                     <div>
-                        <p>isMotivated = true</p>
+                        <p>i{text}</p>
                         <div className="blink"></div>
                     </div>
                 </span>
@@ -25,7 +60,7 @@ export function Presentation(){
         return(
             <div className="section presentation">
                 <div className="presentationContent">
-                    <HelloWorld />
+                    <AboutMe />
                     <div className="right">
                         <div className="rightContent">
                             <h1>Salut !</h1>

@@ -1,17 +1,9 @@
-.presentationContent{
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .presentationContent .right{
-    flex-basis: 50%;
+    margin: 0px 80px 0 30%;
     color: white;
     text-align: right;
-    margin-right: 60px;
     display: flex;
-    margin-top: 275px;
 }
 
 .presentationContent .rightContent{
@@ -23,9 +15,8 @@
 }
 
 .presentationContent .left{
-    flex-basis: 50%;
-    margin-left: 125px;
-    margin-top: -250px;
+    padding-top: 70px;
+    margin-left: 10%;
     transform: translateX(100px);
     opacity: 0;
     transition-duration: 2.5s;
@@ -49,7 +40,7 @@
 
 .presentationContent .rightLine{
     transform: scaleY(0);
-    width: 15px;
+    width: 10px;
     background-color: #FC802D;
     transition-duration: 2.5s;
     transition-property: transform, width;
@@ -62,7 +53,7 @@
 .leftContent .arguments div .blink{
     width: 3px;
     background-color: #FC802D;
-    margin-left: 10px;
+    margin-left: 5px;
     animation: blink 1s step-end infinite;
 }
 
@@ -92,61 +83,16 @@
     }
 }
 
-@media (max-width: 1300px) {
-    .presentationContent .left{
-        margin-top: -100px;
-    }
-}
-
-@media (max-width: 1100px) {
-    .presentationContent{
-        flex-direction: column;
-        margin-top: 0;
-    }
-
-    .presentationContent .left{
-        flex-basis: auto;
-        margin-top: 200px;
-        margin-right: 200px;
-        margin-left: 0;
-    }
-
-    .presentationContent .right{
-        flex-basis: auto;
-        margin-left: 200px;
-        margin-bottom: 250px;
-    }
-
-    .presentationContent .rightContent p{
-        font-size: 1.5em;
-    }
-}
-
 @media (max-width: 800px) {
-    .presentationContent .left{
-        margin-top: 100px;
-        margin-right: 50px;
-        margin-left: 0;
-    }
-
     .presentationContent .right{
-        margin-top: 0;
-        margin-bottom: 150px;
-        margin-left: 50px;
+        margin-right: 20px;
+        margin-left: 100px;
     }
 }
 
 @media (max-width: 600px) {
-    .presentationContent .left{
-        margin-top: 40px;
-    }
-
     .presentationContent .leftContent{
         font-size: 2em;
-    }
-
-    .presentationContent .arguments{
-        margin-left: 60px;
     }
 
     .presentationContent .rightContent p{
@@ -154,19 +100,25 @@
     }
 
     .presentationContent .right{
-        margin-top: 0;
-        margin-bottom: 50px;
-        margin-left: 30px;
-        margin-right: 25px;
+        margin-right: 20px;
+        margin-left: 20px;
     }
 }
 
 @media (max-width: 420px) {
     /* lol 420 */
-    
-    .presentationContent .left{
-        margin-right: 0;
-        margin-top: 85px;
+
+    .presentationContent .right{
+        margin-top: 25%;
+    }
+
+    .presentationContent .left {
+        margin-left: 20px;
+        padding-top: 100px;
+    }
+
+    .presentationContent .arguments{
+        margin-left: 50px;
     }
 
     .presentationContent .leftContent{
@@ -174,31 +126,22 @@
     }
 
     .presentationContent .rightContent p{
-        font-size: 1em;
-    }
-
-    .presentationContent .right{
-        margin-bottom: 100px;
+        font-size: 0.9em;
     }
 }
 
-@media (max-width: 340px) {
-    /* for the 3 last Iphone5 users */
-    .presentationContent .left{
-        margin-top: 60px;
-    }
-
-    .presentationContent .leftContent{
-        font-size: 1.25em;
-    }
-
-    .presentationContent .rightContent p{
-        font-size: 0.75em;
+@media (min-height: 850px) {
+    .presentationContent .left {
+        padding-top: 150px;
     }
 
     .presentationContent .right{
-        margin-bottom: 40px;
+        margin-top: 15%;
     }
-    
 }
 
+@media (max-height: 700px) {
+    .presentationContent .right{
+        margin-top: 25px;
+    }
+}

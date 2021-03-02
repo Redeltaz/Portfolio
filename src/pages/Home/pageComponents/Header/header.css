@@ -17,33 +17,65 @@ header .headerContent{
 
 .headerContent p:first-child{
     font-size: 3.5em;
-    transition: 2s;
+    transform: translateY(-200px);
+    opacity: 0;
+    transition-duration: 2s;
+    transition-property: transform, opacity;
 }
 
 .headerContent p:last-child{
     font-size: 1.5em;
-    transition: 2s;
+    transform: translateY(150px);
+    opacity: 0;
+    transition-duration: 2s;
+    transition-property: transform, opacity;
 }
 
 .middleLine{
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 90px;
+    margin-bottom: 90px;
 }
 
 .middleLine .line{
     background-color: white;
     height: 2px;
     margin: 0 auto;
-    transition: width 1.5s;
+    width: 0;
+    transition-duration: 1.5s;
+    transition-property: width;
+    transition-delay: 1300ms;
 }
 
 .middleLine .square{
     width: 20px;
     height: 20px;
     border: 3px solid white;
-    background-color: #FC802D;
+    background-color: #1A202B;
     margin: -14px auto 0 auto;
-    transition: 1s;
+    transform: rotate(225deg);
+    opacity: 0;
+    transition-duration: 1s;
+    transition-property: transform, opacity;
+    transition-delay: 1300ms;
+}
+
+.active .headerContent p:first-child{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.active .headerContent p:last-child{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.active .middleLine .line{
+    width: 90%;
+}
+
+.active .middleLine .square{
+    transform: rotate(45deg);
+    opacity: 1;
 }
 
 @media (max-width: 400px) {

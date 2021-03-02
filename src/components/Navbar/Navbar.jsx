@@ -1,6 +1,6 @@
 import {Component, useRef, useState} from 'react'
 import {Route, BrowserRouter as Router, Link} from 'react-router-dom'
-import {About} from '../../pages/About/About'
+import {Projects} from '../../pages/Projects/Projects'
 import {Home} from '../../pages/Home/Home'
 import {Contact} from '../../pages/Contact/Contact'
 import './navbar.css'
@@ -45,13 +45,13 @@ export class Navbar extends Component {
                 {/* <nav>
                     <ul>
                         <Link to="/"><NavElement>Home</NavElement></Link>
-                        <Link to="/about"><NavElement>About</NavElement></Link>
+                        <Link to="/projects"><NavElement>Projets</NavElement></Link>
                         <Link to="/contact"><NavElement>Contact</NavElement></Link>
                     </ul>
                 </nav> */}
             </div>
             <Route path="/" exact component={Home} />
-            <Route path="/about" component={About} />
+            <Route path="/projects" component={Projects} />
             <Route path="/contact" component={Contact} />
         </Router>
     }
