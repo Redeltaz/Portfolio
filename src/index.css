@@ -5,7 +5,10 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
-    scroll-snap-type: y mandatory;
+}
+
+main{
+    height: 100vh;
 }
 
 p::selection{
@@ -17,6 +20,10 @@ h1::selection{
 }
 
 h2::selection{
+    color: #FC802D;
+}
+
+h3::selection{
     color: #FC802D;
 }
 

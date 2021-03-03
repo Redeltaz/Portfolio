@@ -1,32 +1,32 @@
 [
     {
+        "name": "Portfolio",
+        "logos" : ["react"],
+        "description" : "Cela faisait longtemps que je me prenait d'envie de me faire mon propre site qui reflèterais mes passion et tout le travail que j'ai réalisé, après avoir réalisé un prototype assez basique en WordPress pour un projet de cours je me suis donné le défi d'enfin réaliser ce projet avec une librairie que j'aime beaucoup : React. C'est un projet que j'ai pris énormément de plaisir à réaliser, il ressemble vraiment au rendu que je m'imaginais et j'en suis fier. C'est également mon premier projet qui reflète ce que j'ai pu apprendre par moi même avec cette librairie.",
+        "github" : "https://github.com/Redeltaz/Portofio"
+    },
+    {
         "name": "Devcorp",
-        "logos" : ["symfonyLogo", "javascriptLogo"],
+        "logos" : ["symfony","mysql" ,"javascript"],
         "description" : "Gros Projet scolaire de 2ème année, il nous était demandé de créer un site forum d'entraide dans la programmation pour les élèves de notre école (à la manière de StackOverflow), nous étions libre et nous avons donc choisis de nous tourner vers le framework PHP Symfony pour réaliser ce projet (qui est toujours en cours). De mon coté je me suis occupé d'une grosse partie des fonctionnalités backend (gestion de la partie forum, des postes, partie admin...) et également de la retranscription des données json que j'envoyais via Symfony avec du javascript.",
         "github" : "https://github.com/Redeltaz/Devcorp"
     },
     {
-        "name": "Thème Kooks",
-        "logos" : ["wordpressLogo", "javascriptLogo"],
+        "name": "Thème Kook's",
+        "logos" : ["wordpress", "javascript"],
         "description" : "A l'issue de la Bourse à Projet de mon école, nous étions en relation avec un véritable client et nous devions répondre à ses besoins de manière agile. Le client, CEO de la startup Kook's nous a demandé de lui réaliser un site e-commerce pour vendre ses produits, je m'en suis occupé en réalisant un thème WordPress from scratch. Il nous a également demandé d'embellir son site vitrine en y ajoutant des animation 3D, je me suis occupé de cette partie à l'aide de la bibliothèque ThreeJS.",
         "github" : "https://github.com/Redeltaz/kooks-wp_theme"
     },
     {
         "name": "App Payement",
-        "logos" : ["AngularLogo", "FirebaseLogo"],
-        "description" : "A la suite d'une demande de stage, j'ai pu prendre contact avec la startup Rumble Studio et afin de valider mon niveau et m'a capacité à assimiler rapidement des connaissances, il m'ont demandé de réaliser une petite application avec divers fonctionnalités en Angular et Firebase (je n'avais aucune connaissance de ces technologies), le tout en comptant l'apprentissage a été réalisé en 3 jours.",
+        "logos" : ["angular", "firebase"],
+        "description" : "A la suite d'une demande de stage, j'ai pu prendre contact avec la startup Rumble Studio et, afin de valider mon niveau et m'a capacité à assimiler rapidement des connaissances, il m'ont demandé de réaliser une petite application avec divers fonctionnalités en Angular pour le front et Firebase pour le back (je n'avais aucune connaissance de ces technologies), le tout en comptant l'apprentissage a été réalisé en 3 jours.",
         "github" : "https://github.com/Redeltaz/rumble-studio-test-intern"
     },
     {
         "name": "Divers CRUD",
-        "logos" : ["nodeLogo", "mongodbLogo", "linuxLogo"],
+        "logos" : ["node", "mongodb", "linux"],
         "description" : "Lorsque par moment je manque d'inspiration et que je ne sais pas quoi réaliser, je m'amuse à apprendre des nouvelles technologies et à réaliser des petits CRUD afin de maîtriser les basiques au moins de ces technologies. Ce sont d'ailleurs ces petits projets qui m'ont fait découvrir Node et MongoDB qui sont aujourd'hui des technologies que j'apprécie énormément. Ces CRUD m'ont également servis de projets cobayes pour m'initier aux notions de devops comme Linux pour commencer en les déployant directement sur mon propre VPS ",
-        "github" : ["https://github.com/Redeltaz/MEAN_CRUD", "https://github.com/Redeltaz/Node-CRUD-DVJ"]
-    },
-    {
-        "name": "Portfolio",
-        "logos" : ["reactLogo"],
-        "description" : "Cela faisait longtemps que je me prenait d'envie de me faire mon propre site qui reflèterais mes passion et tout le travail que j'ai réalisé, après avoir réalisé un prototype assez basique en WordPress pour un projet de cours je me suis donné le défi d'enfin réaliser ce projet avec une librairie que j'aime beaucoup : React. C'est un projet que j'ai pris énormément de plaisir à réaliser, il ressemble vraiment au rendu que je m'imaginais et j'en suis fier. C'est également mon premier projet qui reflète ce que j'ai pu apprendre par moi même avec cette librairie.",
-        "github" : "https://github.com/Redeltaz/Portofio"
+        "github" : "https://github.com/Redeltaz/MEAN_CRUD"
     }
 ]

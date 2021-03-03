@@ -50,7 +50,7 @@ export class Navbar extends Component {
                     </ul>
                 </nav> */}
             </div>
-            <Route path="/" exact component={Home} />
+            <Route path="/" exact component={Projects} />
             <Route path="/projects" component={Projects} />
             <Route path="/contact" component={Contact} />
         </Router>
