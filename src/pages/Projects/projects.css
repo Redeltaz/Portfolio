@@ -4,7 +4,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: 1;
+}
+
+.project{
+    transition: 1s;
 }
 
 .allProjects{
@@ -31,6 +34,7 @@
 
 .more{
     height: 103px;
+    transition: 1s;
 }
 
 .more h3{

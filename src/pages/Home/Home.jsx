@@ -12,7 +12,7 @@ export class Home extends Component {
         scrollingSpeed = {1500}
         verticalCentered = {false}
     
-        render={({ state, fullpageApi }) => {
+        render={() => {
           return (
             <div className="home">
                 <ReactFullpage.Wrapper>

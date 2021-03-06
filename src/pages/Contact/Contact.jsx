@@ -4,13 +4,10 @@ import { useEffect, useState } from 'react'
 
 function Title(props){
     const [width, setWidth] = useState({width: '0'})
-    const [visible, setVisible] = useState(props.isVisible)
 
     useEffect(() => {
-        if(!visible){
-            setWidth({width: '100%'})
-        }
-    }, [visible])
+        setWidth({width: '100%'})
+    }, [])
 
     return(
         <div className="title">
@@ -29,7 +26,7 @@ function Single(props){
     )
 }
 
-function Button(props){
+function Button(){
     return(
         <a href="./CV_Lucas_Campistron.pdf" target="_blank">
             <div className="button">
@@ -39,25 +36,17 @@ function Button(props){
     )
 }
 
-export function Contact(props){
+export function Contact(){
     const [style, setStyle] = useState({transform: 'translateX(-150px)', opacity: '0'})
-    const [isVisible, setIsVisible] = useState(false)
-
-    const [ref, inView] = useInView({
-        threshold: 1
-    })
-
+    
     useEffect(() => {
-        if(!inView){
-            setIsVisible(true)
-            setStyle({transform: 'translateX(0px)', opacity: '1'})
-        }
-    }, [inView])
+        setStyle({transform: 'translateX(0px)', opacity: '1'})
+    }, [])
 
     return (
         <div className="contact">
-            <div className="content" rel={ref} style={style}>
-                <Title isVisible={isVisible} />
+            <div className="content" style={style}>
+                <Title />
                 <div className="link">
                     <Single img="linkedin" content="Lucas Campistron" link="https://www.linkedin.com/in/lucas-campistron-9660891a1/" />
                     <Single img="gmail" content="lucascampistron95@gmail.com" />

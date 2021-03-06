@@ -6,10 +6,17 @@ import './projects.css'
 export function SingleProject(props){
     const [isClicked, setIsClicked] = useState(false)
     const [maxSizeStyle, setMaxSizeStyle] = useState({display: 'none', opacity: 0, transform: 'translateY(-50px)'})
+    const [style, setStyle] = useState({opacity: '0', transform: 'translateY(-80px)'})
     const logos = props.logos.map((logo) => {
         return <img src={`./images/logos/${logo}.svg`} alt={logo} />
     })
     const all = document.querySelectorAll('.minSize')
+
+    useEffect(() => {
+        setTimeout(() => {
+            setStyle({opacity: '1', transform: 'translateY(0px)'})
+        }, 600)
+    }, [])
 
     function addSize(){
         if(!isClicked){
@@ -43,7 +50,7 @@ export function SingleProject(props){
     }
 
     return(
-        <div className="project">
+        <div className="project" style={style}>
             <div className="minSize" onClick={addSize}>
                 <h3>{props.name}</h3>
                 <div className="logos">
@@ -68,7 +75,23 @@ export function SingleProject(props){
     )
 }
 
-export function Projects(props){
+function More(){
+    const [style, setStyle] = useState({opacity: '0', transform: 'translateY(-80px)'})
+
+    useEffect(() => {
+        setTimeout(() => {
+            setStyle({opacity: '1', transform: 'translateY(0px)'})
+        }, 2400)
+    }, [])
+
+    return(
+        <div className="minSize more" style={style}>
+            <h3>A venir...</h3>
+        </div>
+    )
+}
+
+export function Projects(){
     const [projectArray, setProjectArray] = useState([])
     let index = 0
 
@@ -89,11 +112,11 @@ export function Projects(props){
     useEffect(() => {
         const interval = setInterval(() => {
             setProjectArray(projectArray => [...projectArray, listProjects[index]])
-            index += 1
+            index++
             if(index >= listProjects.length){
                 clearInterval(interval)
             }
-        }, 400)
+        }, 300)
 
         return () => {
             clearInterval(interval)
@@ -104,9 +127,7 @@ export function Projects(props){
         <div className="projects">
             <div className="allProjects" rel={ref}>
                 {projectArray}
-                <div className="minSize more">
-                    <h3>A venir...</h3>
-                </div>
+                <More />
             </div>
         </div>
     )
