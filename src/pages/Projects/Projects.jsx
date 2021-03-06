@@ -1,5 +1,6 @@
 import ProjectsData from './allProjects.json'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
+import {useInView} from 'react-intersection-observer'
 import './projects.css'
 
 export function SingleProject(props){
@@ -68,6 +69,12 @@ export function SingleProject(props){
 }
 
 export function Projects(props){
+    const [projectArray, setProjectArray] = useState([])
+    let index = 0
+
+    const [ref, inView] = useInView({
+        threshold: 1
+    })
 
     const listProjects = ProjectsData.map((project) =>
         <SingleProject 
@@ -79,10 +86,24 @@ export function Projects(props){
         />
     );
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setProjectArray(projectArray => [...projectArray, listProjects[index]])
+            index += 1
+            if(index >= listProjects.length){
+                clearInterval(interval)
+            }
+        }, 400)
+
+        return () => {
+            clearInterval(interval)
+        }
+    }, [inView])
+
     return (
         <div className="projects">
-            <div className="allProjects">
-                {listProjects}
+            <div className="allProjects" rel={ref}>
+                {projectArray}
                 <div className="minSize more">
                     <h3>A venir...</h3>
                 </div>

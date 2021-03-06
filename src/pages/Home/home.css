@@ -2,17 +2,3 @@
 header, .presentation, .skills {
     height: 100vh;
 }
-
-.section1{
-    height: 100vh;
-    background-color: aqua;
-}
-
-.section2{
-    height: 100vh;
-    background-color: blue;
-}
-
-/* ::-webkit-scrollbar{
-    display: none;
-} */

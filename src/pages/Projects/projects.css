@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: 1;
 }
 
 .allProjects{
@@ -11,6 +12,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    transition-property: opacity;
+    transition-duration: 1s;
 }
 
 .minSize{

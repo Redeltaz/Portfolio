@@ -1,0 +1,63 @@
+.contact{
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    transition-property: transform, opacity;
+    transition-duration: 2s;
+}
+
+.title h1{
+    font-size: 3em;
+}
+
+.title .titleLine{
+    margin-top: 10px;
+    height: 3px;
+    background-color: #FC802D;
+    transition-property: width;
+    transition-duration: 2s;
+}
+
+.link .single{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.link .single p{
+    margin-left: 10px;
+    font-size: 1.5em;
+}
+
+.link .single a{
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 1.5em;
+}
+
+.link img{
+    width: 50px;
+}
+
+.content .button{
+    cursor: pointer;
+    margin: 40px auto 0 auto;
+    text-align: center;
+    width: 100px;
+    border: 2px solid #FC802D;
+    border-radius: 25px;
+    padding: 5px 0 5px 0;
+}
+
+.content a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.25em;
+}

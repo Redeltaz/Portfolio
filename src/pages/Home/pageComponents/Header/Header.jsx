@@ -17,7 +17,7 @@ export function Header(props){
     return (
         <header ref={ref} className="section">
             <div className="headerContent">
-                <p>lucas campitron</p>
+                <p>lucas campistron</p>
                 <div className="middleLine" >
                     <div className="line" style={transitionTime}></div>
                     <div className="square" style={transitionTime}></div>

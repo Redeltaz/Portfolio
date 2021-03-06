@@ -1,4 +1,4 @@
-import {Component, useRef, useState} from 'react'
+import {useEffect, useRef, useState} from 'react'
 import {Route, BrowserRouter as Router, Link} from 'react-router-dom'
 import {Projects} from '../../pages/Projects/Projects'
 import {Home} from '../../pages/Home/Home'
@@ -37,22 +37,78 @@ function NavElement(props) {
     )
 }
 
-export class Navbar extends Component {
+export function Navbar () {
+    const [firstStyle, setFirstStyle] = useState({height: '25px', transform: 'translateX(0px) rotate(0deg)', backgroundColor: 'white'})
+    const [secondStyle, setSecondStyle] = useState({height: '50px', transform: 'scale(1)', backgroundColor: 'white'})
+    const [thirdStyle, setThirdStyle] = useState({height: '35px', transform: 'translateX(0px) rotate(0deg)', backgroundColor: 'white'})
+    const [navVisibility, setNavVisibility] = useState({height: '200px'})
+    const [isVisible, setIsVisible] = useState(false)
 
-    render (){
-        return <Router>
-            <div className="navbar">
-                {/* <nav>
+    useEffect(() => {
+        if(!isVisible){
+            setNavVisibility({height: 'auto'})
+        }else{
+            setNavVisibility({height: '50px'})
+        }
+    }, [isVisible])
+
+    function onHoverStyle(){
+        if(!isVisible){
+            setFirstStyle({height: '35px', backgroundColor: '#FC802D'})
+            setSecondStyle({height: '20px', backgroundColor: '#FC802D'})
+            setThirdStyle({height: '50px', backgroundColor: '#FC802D'})
+        }
+    }
+
+    function outHoverStyle(){
+        if(!isVisible){
+            setFirstStyle({height: '25px', backgroundColor: 'white'})
+            setSecondStyle({height: '50px', backgroundColor: 'white'})
+            setThirdStyle({height: '35px', backgroundColor: 'white'})
+        }
+    }
+
+    function visible(){
+        if(!isVisible){
+            setFirstStyle({height: '50px', transform: 'translateX(18px) rotate(0deg)', backgroundColor: '#FC802D'})
+            setThirdStyle({height: '50px', transform: 'translateX(-18px) rotate(0deg)', backgroundColor: '#FC802D'})
+            setTimeout(() => {
+                setSecondStyle({transform: 'scale(0)'})
+                setFirstStyle({height: '50px', transform: 'translateX(18px) rotate(45deg)', backgroundColor: '#FC802D'})
+                setThirdStyle({height: '50px', transform: 'translateX(-18px) rotate(-45deg)', backgroundColor: '#FC802D'})
+            }, 500)
+            setIsVisible(true)
+        }else{
+            setFirstStyle({height: '50px', transform: 'translateX(18px) rotate(0deg)', backgroundColor: 'white'})
+            setThirdStyle({height: '50px', transform: 'translateX(-18px) rotate(0deg)', backgroundColor: 'white'})
+            setTimeout(() => {
+                setSecondStyle({height:'50px', transform: 'scale(1)', backgroundColor: 'white'})
+                setFirstStyle({height: '25px', transform: 'translateX(0px) rotate(0deg)', backgroundColor: 'white'})
+                setThirdStyle({height: '35px', transform: 'translateX(0px) rotate(0deg)', backgroundColor: 'white'})
+                setIsVisible(false)
+            }, 500)
+        }
+    }
+
+    return (
+        <Router>
+            <div className="navbar" style={navVisibility}>
+                <nav>
                     <ul>
                         <Link to="/"><NavElement>Home</NavElement></Link>
                         <Link to="/projects"><NavElement>Projets</NavElement></Link>
                         <Link to="/contact"><NavElement>Contact</NavElement></Link>
                     </ul>
-                </nav> */}
+                </nav>
+                <div className="burger" onClick={visible} onMouseOver={onHoverStyle} onMouseOut={outHoverStyle}>
+                    <div style={firstStyle}></div>
+                    <div style={secondStyle}></div>
+                    <div style={thirdStyle}></div>
+                </div>
             </div>
-            <Route path="/" exact component={Projects} />
+            <Route path="/" exact component={Home} />
             <Route path="/projects" component={Projects} />
             <Route path="/contact" component={Contact} />
         </Router>
-    }
+    )
 }

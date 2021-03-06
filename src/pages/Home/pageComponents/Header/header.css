@@ -79,6 +79,10 @@ header .headerContent{
     opacity: 1;
 }
 
+.arrow{
+    color: white;
+}
+
 @media (max-width: 400px) {
     .headerContent p:first-child{
         font-size: 3em;
