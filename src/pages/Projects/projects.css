@@ -67,9 +67,23 @@
 }
 
 .maxSize .close{
-    text-decoration: underline;
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #FC802D;
+    border-radius: 25px;
     cursor: pointer;
     margin-top: 30px;
+}
+
+.maxSize .close p{
+    font-size: 0.9em;
+}
+
+.maxSize .maxTitle .underline{
+    height: 2px;
+    background-color: #FC802D;
+    transition-property: width;
+    transition-duration: 1s;
 }
 
 .maxSize .top{

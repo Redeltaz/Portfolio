@@ -64,12 +64,11 @@ export function Presentation(){
                     <div className="right">
                         <div className="rightContent">
                             <h1>Salut !</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit. Ut lobortis ornare metus, at pulvinar mi mollis quis. Mauris 
-                            aliquet vehicula dolor, at iaculis ligula pellentesque eget. Quisque cursus mauris 
-                            eget metus dignissim tristique. Ut ut libero et neque elementum ultrices nec sed turpis. 
-                            Cras elementum, purus sit amet dictum interdum, dolor nibh dapibus velit, at blandit quam 
-                            lorem vel lacus. Ut accumsan vitae eros ut porttitor</p>
+                            <p>Moi c'est Lucas je suis actuellement en 2ème année dans un bachelor Développement Web à l'IIM, je suis un jeune homme 
+                                passioné par la programmation, notamment le Javascript. Je préfère le backend mais je reste tout de même polyvalent 
+                                en maîtrisant certaines technologies frontend. Je suis également très intéressé par les outils devops (Docker, Kubernetes, GCP...) 
+                                dans l'espoir de bien les maîtriser un jour pour être le plus polyvalent possible!
+                            </p>
                         </div>
                         <div className="rightLine"></div>
                     </div>

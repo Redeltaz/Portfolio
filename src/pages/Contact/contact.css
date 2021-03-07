@@ -61,3 +61,17 @@
     text-decoration: none;
     font-size: 1.25em;
 }
+
+@media screen and (max-width: 600px){
+    .title h1{
+        font-size: 2em;
+    }
+
+    .link .single p{
+        font-size: 1em;
+    }
+
+    .link .single a{
+        font-size: 1em;
+    }
+}

@@ -8,12 +8,12 @@ import './navbar.css'
 function NavElement(props) {
 
     const [hoverWidth, setHoverWidth] = useState({width: '0px', float: 'left'})
+    const [elemStyle, setElemStyle] = useState({transform: 'translateY(-100px)', opacity: '0'})
     const [isFinished, setIsFinished] = useState(false)
-    const elem = useRef(null)
 
     function inHoverStyle(){
         setIsFinished(false)
-        setHoverWidth({width: `${elem.current.offsetWidth}px`})
+        setHoverWidth({width: '100%'})
         setTimeout(() => {
             setIsFinished(true)
         }, 600)
@@ -29,9 +29,27 @@ function NavElement(props) {
         }
     }
 
+    function changePage(){
+        let allElem = document.querySelectorAll('.singleNav')
+        allElem.forEach(elem => {
+            elem.style.opacity = 0
+            elem.style.transform = 'translateY(-100px)'
+        })
+    }
+
+    useEffect(() => {
+        if(props.isVisible){
+            setTimeout(() => {
+                setElemStyle({transform: 'translateY(0px)', opacity: '1'})
+            }, props.timer)
+        }else{
+            setElemStyle({transform: 'translateY(-100px)', opacity: '0'})
+        }
+    }, [props.isVisible])
+
     return (
-        <li>
-            <p onMouseEnter={inHoverStyle} onMouseLeave={outHoverStyle} ref={elem}>{props.children}</p>
+        <li style={elemStyle} className="singleNav">
+            <p onMouseEnter={inHoverStyle} onMouseLeave={outHoverStyle} onClick={changePage}>{props.children}</p>
             <div className="underline" style={hoverWidth}></div>
         </li>
     )
@@ -41,14 +59,14 @@ export function Navbar () {
     const [firstStyle, setFirstStyle] = useState({height: '25px', transform: 'translateX(0px) rotate(0deg)', backgroundColor: 'white'})
     const [secondStyle, setSecondStyle] = useState({height: '50px', transform: 'scale(1)', backgroundColor: 'white'})
     const [thirdStyle, setThirdStyle] = useState({height: '35px', transform: 'translateX(0px) rotate(0deg)', backgroundColor: 'white'})
-    const [navVisibility, setNavVisibility] = useState({height: '200px'})
+    const [navVisibility, setNavVisibility] = useState({height: '0px'})
     const [isVisible, setIsVisible] = useState(false)
 
     useEffect(() => {
-        if(!isVisible){
+        if(isVisible){
             setNavVisibility({height: 'auto'})
         }else{
-            setNavVisibility({height: '50px'})
+            setNavVisibility({height: '0px'})
         }
     }, [isVisible])
 
@@ -95,9 +113,9 @@ export function Navbar () {
             <div className="navbar" style={navVisibility}>
                 <nav>
                     <ul>
-                        <Link to="/"><NavElement>Home</NavElement></Link>
-                        <Link to="/projects"><NavElement>Projets</NavElement></Link>
-                        <Link to="/contact"><NavElement>Contact</NavElement></Link>
+                        <Link to="/"><div onClick={visible}><NavElement timer={200} isVisible={isVisible}>Home</NavElement></div></Link>
+                        <Link to="/projects"><div onClick={visible}><NavElement timer={600} isVisible={isVisible}>Projets</NavElement></div></Link>
+                        <Link to="/contact"><div onClick={visible}><NavElement timer={1000} isVisible={isVisible}>Contact</NavElement></div></Link>
                     </ul>
                 </nav>
                 <div className="burger" onClick={visible} onMouseOver={onHoverStyle} onMouseOut={outHoverStyle}>
@@ -108,7 +126,7 @@ export function Navbar () {
             </div>
             <Route path="/" exact component={Home} />
             <Route path="/projects" component={Projects} />
-            <Route path="/contact" component={Contact} />
+            <Route path="/contact" render={(props) => <Contact isVisible={true} />}/>
         </Router>
     )
 }

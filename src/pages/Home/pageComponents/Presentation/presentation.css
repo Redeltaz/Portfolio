@@ -35,7 +35,8 @@
 }
 
 .presentationContent .rightContent p{
-    margin-top: 40px;
+    font-size: 1.25em;
+    margin-top: 20px;
 }
 
 .presentationContent .rightLine{
@@ -114,7 +115,7 @@
 
     .presentationContent .left {
         margin-left: 20px;
-        padding-top: 100px;
+        padding-top: 110px;
     }
 
     .presentationContent .arguments{
@@ -143,5 +144,15 @@
 @media (max-height: 700px) {
     .presentationContent .right{
         margin-top: 25px;
+    }
+}
+
+@media (max-height: 580px){
+    .presentationContent .left {
+        padding-top: 40px;
+    }
+
+    .presentationContent .rightContent p{
+        font-size: 0.7em;
     }
 }

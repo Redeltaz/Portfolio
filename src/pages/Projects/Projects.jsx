@@ -5,8 +5,9 @@ import './projects.css'
 
 export function SingleProject(props){
     const [isClicked, setIsClicked] = useState(false)
-    const [maxSizeStyle, setMaxSizeStyle] = useState({display: 'none', opacity: 0, transform: 'translateY(-50px)'})
+    const [maxSizeStyle, setMaxSizeStyle] = useState({display: 'none', opacity: 0, transform: 'scale(1)'})
     const [style, setStyle] = useState({opacity: '0', transform: 'translateY(-80px)'})
+    const [lineStyle, setLineStyle] = useState({width: '0'})
     const logos = props.logos.map((logo) => {
         return <img src={`./images/logos/${logo}.svg`} alt={logo} />
     })
@@ -28,9 +29,10 @@ export function SingleProject(props){
                     elem.style.opacity = "0"
                 })
             })
-            setMaxSizeStyle({display: 'block', opacity: 0, transform: 'translateY(-50px)'})
+            setMaxSizeStyle({display: 'block', opacity: 0, transform: 'scale(0.9)'})
             requestAnimationFrame(() => {
-                setMaxSizeStyle({display: 'block', opacity: 1, transform: 'translateY(0px)'})
+                setMaxSizeStyle({display: 'block', opacity: 1, transform: 'scale(1)'})
+                setLineStyle({width: '100%'})
             })
         }
     }
@@ -44,6 +46,7 @@ export function SingleProject(props){
             })
         })
         setMaxSizeStyle({display: 'block', opacity: 1})
+        setLineStyle({width: '0'})
         requestAnimationFrame(() => {
             setMaxSizeStyle({display: 'none', opacity: 1})
         })
@@ -59,7 +62,10 @@ export function SingleProject(props){
             </div>
             <div className="maxSize" style={maxSizeStyle}>
                 <div className="top">
-                    <h1>{props.name}</h1>
+                    <div className="maxTitle">
+                        <h1>{props.name}</h1>
+                        <div className="underline" style={lineStyle}></div>
+                    </div>
                     <a href={props.projectLink} target="_blank" rel="noreferrer"><img src='./images/logos/github.svg' alt="logo github"/></a>
                 </div>
                 <p className="description">{props.description}</p>
@@ -69,7 +75,7 @@ export function SingleProject(props){
                         {logos}
                     </div>
                 </div>
-                <p onClick={removeSize} className="close">Réduire</p>
+                <div onClick={removeSize} className="close"><p>Réduire</p></div>
             </div>
         </div>
     )
@@ -95,10 +101,6 @@ export function Projects(){
     const [projectArray, setProjectArray] = useState([])
     let index = 0
 
-    const [ref, inView] = useInView({
-        threshold: 1
-    })
-
     const listProjects = ProjectsData.map((project) =>
         <SingleProject 
             key = {project.name}
@@ -121,11 +123,11 @@ export function Projects(){
         return () => {
             clearInterval(interval)
         }
-    }, [inView])
+    }, [])
 
     return (
         <div className="projects">
-            <div className="allProjects" rel={ref}>
+            <div className="allProjects">
                 {projectArray}
                 <More />
             </div>

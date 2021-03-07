@@ -1,5 +1,5 @@
 .navbar{
-    background-color: rgba(0, 0, 0, 0.288);
+    background-color: #120820;
     position: absolute;
     width: 100%;
     z-index: 2;
@@ -14,7 +14,7 @@
 }
 
 .navbar nav{
-    padding: 40px 0;
+    padding: 60px 0 40px 0;
 }
 
 .navbar ul a{
@@ -25,10 +25,8 @@
 .navbar ul li{
     color: white;
     font-size: 1.5em;
-}
-
-.navbar ul a:last-child{
-    margin-right: 80px;
+    transition-property: transform, opacity;
+    transition-duration: 0.8s;
 }
 
 .underline{
@@ -41,8 +39,8 @@
 
 .burger{
     position: absolute;
-    top: 60px;
-    right: 100px;
+    top: 50px;
+    right: 80px;
     display: flex;
     cursor: pointer;
 }
