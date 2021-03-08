@@ -2,7 +2,7 @@
     {
         "name": "Portfolio",
         "logos" : ["react"],
-        "description" : "Cela faisait longtemps que je me prenais d'envie de me faire mon propre site qui reflèterais mes passion et tout le travail que j'ai réalisé. Après avoir réalisé un prototype assez basique en WordPress pour un projet de cours je me suis donné le défi d'enfin réaliser ce projet avec une librairie que j'aime beaucoup : React. C'est un projet que j'ai pris énormément de plaisir à réaliser, il ressemble vraiment au rendu que je m'imaginais et j'en suis fier. C'est également mon premier projet qui reflète ce que j'ai pu apprendre par moi même avec cette librairie.",
+        "description" : "Cela faisait longtemps que j'avais envie de faire mon propre site qui reflèterait mes passion et tout le travail que j'ai réalisé. Après avoir réalisé un prototype assez basique en WordPress pour un projet de cours je me suis donné le défi d'enfin réaliser ce projet avec une librairie que j'aime beaucoup : React. C'est un projet que j'ai pris énormément de plaisir à réaliser, il ressemble vraiment au rendu que je m'imaginais et j'en suis fier. C'est également mon premier projet qui reflète ce que j'ai pu apprendre par moi même avec cette librairie.",
         "github" : "https://github.com/Redeltaz/Portofio"
     },
     {
