@@ -74,4 +74,8 @@
     .link .single a{
         font-size: 1em;
     }
+
+    .content .button{
+        border: 2px solid white;
+    }
 }

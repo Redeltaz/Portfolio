@@ -1,6 +1,5 @@
 import ProjectsData from './allProjects.json'
 import {useState, useEffect} from 'react'
-import {useInView} from 'react-intersection-observer'
 import './projects.css'
 
 export function SingleProject(props){
@@ -70,7 +69,7 @@ export function SingleProject(props){
                 </div>
                 <p className="description">{props.description}</p>
                 <div className="logoContent">
-                    <p>Compétences développées :</p>
+                    <p>Compétences développées:</p>
                     <div className="logos">
                         {logos}
                     </div>

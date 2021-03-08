@@ -9,18 +9,21 @@
 .skills .mainSkillsFull{
     transform: translateX(-200px);
     opacity: 0;
-    transition: 2s;
+    transition-property: transform opacity;
+    transition-duration: 2s;
 }
 
 .skills .secondSkillsFull{
     transform: translateX(200px);
     opacity: 0;
-    transition: 2s;
+    transition-property: transform opacity;
+    transition-duration: 2s;
 }
 
 .skills .skillsContent{
     opacity: 0;
-    transition: 2s;
+    transition-property: opacity;
+    transition-duration: 2s;
 }
 
 .active .skillsContent{
@@ -109,5 +112,26 @@
 
     .skills .mainSkills, .skills .secondSkills{
         margin: 0 20px;
+    }
+
+    .mainSkillsFull h1{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 400px) {
+    .skills .mainSkillsFull{
+        margin-top: 40px;
+    }
+}
+
+@media (max-height: 700px) {
+    .skills .mainSkillsFull{
+        margin-top: 40px;
+    }
+
+    .skills .secondSkillsFull h1{
+        margin-top: 20px;
     }
 }

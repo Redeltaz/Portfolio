@@ -8,7 +8,7 @@
     {
         "name": "Devcorp",
         "logos" : ["symfony","mysql" ,"javascript"],
-        "description" : "Gros Projet scolaire de 2ème année, il nous était demandé de créer un site forum d'entraide dans la programmation pour les élèves de notre école (à la manière de StackOverflow), nous étions libre et nous avons donc choisis de nous tourner vers le framework PHP Symfony pour réaliser ce projet (qui est toujours en cours). De mon coté je me suis occupé d'une grosse partie des fonctionnalités backend (gestion de la partie forum, des postes, partie admin...) et également de la retranscription des données json que j'envoyais via Symfony avec du javascript.",
+        "description" : "Gros Projet scolaire de 2ème année, il nous était demandé de créer un site forum d'entraide dans la programmation pour les élèves de notre école (à la manière de StackOverflow), nous étions libre et nous avons donc choisis de nous tourner vers le framework PHP Symfony pour réaliser ce projet (qui est toujours en cours). De mon coté je me suis occupé d'une grosse partie des fonctionnalités backend (gestion de la partie forum, des postes, partie admin...).",
         "github" : "https://github.com/Redeltaz/Devcorp"
     },
     {
@@ -26,7 +26,7 @@
     {
         "name": "Divers CRUD",
         "logos" : ["node", "mongodb", "linux"],
-        "description" : "Lorsque par moment je manque d'inspiration et que je ne sais pas quoi réaliser, je m'amuse à apprendre des nouvelles technologies et à réaliser des petits CRUD afin de maîtriser les basiques au moins de ces technologies. Ce sont d'ailleurs ces petits projets qui m'ont fait découvrir Node et MongoDB qui sont aujourd'hui des technologies que j'apprécie énormément. Ces CRUD m'ont également servis de projets cobayes pour m'initier aux notions de devops comme Linux pour commencer en les déployant directement sur mon propre VPS ",
+        "description" : "Pour m'occuper quand je ne sais pas quoi faire, je m'amuse à apprendre des nouvelles technologies et à réaliser des petits CRUD afin de maîtriser les basiques au moins de ces technologies. Ce sont d'ailleurs ces petits projets qui m'ont fait découvrir Node et MongoDB qui sont aujourd'hui des technologies que j'apprécie énormément. Ces CRUD m'ont également servis de projets cobayes pour m'initier aux notions de devops (comme Linux pour commencer) en les déployant directement sur mon propre VPS ",
         "github" : "https://github.com/Redeltaz/MEAN_CRUD"
     }
 ]

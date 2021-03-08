@@ -69,7 +69,7 @@
 .maxSize .close{
     display: inline-block;
     padding: 5px 10px;
-    border: 1px solid #FC802D;
+    border: 2px solid #FC802D;
     border-radius: 25px;
     cursor: pointer;
     margin-top: 30px;
@@ -126,7 +126,7 @@
     }
 
     .allProjects{
-        margin-top: 30px;
+        margin-top: 80px;
     }
 
     .description{
@@ -145,5 +145,9 @@
 @media screen and (max-width: 420px){
     .maxSize .logoContent p{
         flex-basis: 50%;
+    }
+
+    .maxSize .close{
+        border: 2px solid white;
     }
 }

@@ -1,7 +1,7 @@
 import './contact.css'
 import { useEffect, useState } from 'react'
 
-function Title(props){
+function Title(){
     const [width, setWidth] = useState({width: '0'})
 
     useEffect(() => {
@@ -35,15 +35,11 @@ function Button(){
     )
 }
 
-export function Contact(props){
+export function Contact(){
     const [style, setStyle] = useState({transform: 'translateX(-150px)', opacity: '0'})
-    const [isVisible, setIsVisible] = useState(props.isVisible)
     
     useEffect(() => {
-        console.log(isVisible)
-        if(isVisible){
-            setStyle({transform: 'translateX(0px)', opacity: '1'})
-        }
+        setStyle({transform: 'translateX(0px)', opacity: '1'})
     }, [])
 
     return (

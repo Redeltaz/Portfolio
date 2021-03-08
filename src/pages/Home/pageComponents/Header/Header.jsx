@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react'
 import {useInView} from 'react-intersection-observer'
 import './header.css'
 
-export function Header(props){
+export function Header(){
     const [transitionTime, setTransitionTime] = useState({transitionDelay: '1300ms'})
 
 

@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from 'react'
+import {useEffect, useState} from 'react'
 import {Route, BrowserRouter as Router, Link} from 'react-router-dom'
 import {Projects} from '../../pages/Projects/Projects'
 import {Home} from '../../pages/Home/Home'
@@ -8,7 +8,6 @@ import './navbar.css'
 function NavElement(props) {
 
     const [hoverWidth, setHoverWidth] = useState({width: '0px', float: 'left'})
-    const [elemStyle, setElemStyle] = useState({transform: 'translateY(-100px)', opacity: '0'})
     const [isFinished, setIsFinished] = useState(false)
 
     function inHoverStyle(){
@@ -29,27 +28,9 @@ function NavElement(props) {
         }
     }
 
-    function changePage(){
-        let allElem = document.querySelectorAll('.singleNav')
-        allElem.forEach(elem => {
-            elem.style.opacity = 0
-            elem.style.transform = 'translateY(-100px)'
-        })
-    }
-
-    useEffect(() => {
-        if(props.isVisible){
-            setTimeout(() => {
-                setElemStyle({transform: 'translateY(0px)', opacity: '1'})
-            }, props.timer)
-        }else{
-            setElemStyle({transform: 'translateY(-100px)', opacity: '0'})
-        }
-    }, [props.isVisible])
-
     return (
-        <li style={elemStyle} className="singleNav">
-            <p onMouseEnter={inHoverStyle} onMouseLeave={outHoverStyle} onClick={changePage}>{props.children}</p>
+        <li className="singleNav">
+            <p onMouseEnter={inHoverStyle} onMouseLeave={outHoverStyle}>{props.children}</p>
             <div className="underline" style={hoverWidth}></div>
         </li>
     )
@@ -60,13 +41,30 @@ export function Navbar () {
     const [secondStyle, setSecondStyle] = useState({height: '50px', transform: 'scale(1)', backgroundColor: 'white'})
     const [thirdStyle, setThirdStyle] = useState({height: '35px', transform: 'translateX(0px) rotate(0deg)', backgroundColor: 'white'})
     const [navVisibility, setNavVisibility] = useState({height: '0px'})
+    const [elemStyle, setElemStyle] = useState({transform: 'translateY(-250px)', opacity: '0', display: 'none'})
     const [isVisible, setIsVisible] = useState(false)
 
     useEffect(() => {
         if(isVisible){
-            setNavVisibility({height: 'auto'})
+            if(window.innerWidth <= 600){
+                setNavVisibility({height: '240px'})
+                setElemStyle({transform: 'translateY(-250px)', opacity: '0', display: 'block'})
+                requestAnimationFrame(() => {
+                    setElemStyle({transform: 'translateY(0px)', opacity: '1', display: 'block'})
+                })
+            }else{
+                setNavVisibility({height: '140px'})
+                setElemStyle({transform: 'translateY(-250px)', opacity: '0', display: 'block'})
+                requestAnimationFrame(() => {
+                    setElemStyle({transform: 'translateY(0px)', opacity: '1', display: 'block'})
+                })
+            }
         }else{
             setNavVisibility({height: '0px'})
+            setElemStyle({transform: 'translateY(-250px)', opacity: '0', display: 'block'})
+            setTimeout(() => {
+                setElemStyle({transform: 'translateY(-250px)', opacity: '0', display: 'none'})
+            }, 300)
         }
     }, [isVisible])
 
@@ -113,9 +111,9 @@ export function Navbar () {
             <div className="navbar" style={navVisibility}>
                 <nav>
                     <ul>
-                        <Link to="/"><div onClick={visible}><NavElement timer={200} isVisible={isVisible}>Home</NavElement></div></Link>
-                        <Link to="/projects"><div onClick={visible}><NavElement timer={600} isVisible={isVisible}>Projets</NavElement></div></Link>
-                        <Link to="/contact"><div onClick={visible}><NavElement timer={1000} isVisible={isVisible}>Contact</NavElement></div></Link>
+                        <div onClick={visible} style={elemStyle} className="navContent"><Link to="/"><NavElement timer={200} isVisible={isVisible}>Home</NavElement></Link></div>
+                        <div onClick={visible} style={elemStyle} className="navContent"><Link to="/projects"><NavElement timer={600} isVisible={isVisible}>Projets</NavElement></Link></div>
+                        <div onClick={visible} style={elemStyle} className="navContent"><Link to="/contact"><NavElement timer={1000} isVisible={isVisible}>Contact</NavElement></Link></div>
                     </ul>
                 </nav>
                 <div className="burger" onClick={visible} onMouseOver={onHoverStyle} onMouseOut={outHoverStyle}>
@@ -126,7 +124,7 @@ export function Navbar () {
             </div>
             <Route path="/" exact component={Home} />
             <Route path="/projects" component={Projects} />
-            <Route path="/contact" render={(props) => <Contact isVisible={true} />}/>
+            <Route path="/contact" component={Contact} />
         </Router>
     )
 }

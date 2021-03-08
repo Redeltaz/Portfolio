@@ -41,11 +41,11 @@ export function Skills(){
                 <div className="secondSkills">
                     <Logo logoName='angular' logoAlt="logo angular" name="Angular"/>
                     <Logo logoName='laravel' logoAlt="logo laravel" name="Laravel"/>
-                    <Logo logoName='linux' logoAlt="logo linux" name="Linux"/>
+                    <Logo logoName='vue' logoAlt="logo vue" name="Vue.js"/>
                     <br />
+                    <Logo logoName='linux' logoAlt="logo linux" name="Linux"/>
                     <Logo logoName='sass' logoAlt="logo sass" name="Sass"/>
                     <Logo logoName='mongodb' logoAlt="logo mongodatabase" name="MongoDB"/>
-                    <Logo logoName='mysql' logoAlt="logo mysql" name="MySQL"/>
                 </div>
             </div>
         </div>
