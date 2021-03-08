@@ -2,7 +2,7 @@
     {
         "name": "Portfolio",
         "logos" : ["react"],
-        "description" : "Cela faisait longtemps que je me prenait d'envie de me faire mon propre site qui reflèterais mes passion et tout le travail que j'ai réalisé, après avoir réalisé un prototype assez basique en WordPress pour un projet de cours je me suis donné le défi d'enfin réaliser ce projet avec une librairie que j'aime beaucoup : React. C'est un projet que j'ai pris énormément de plaisir à réaliser, il ressemble vraiment au rendu que je m'imaginais et j'en suis fier. C'est également mon premier projet qui reflète ce que j'ai pu apprendre par moi même avec cette librairie.",
+        "description" : "Cela faisait longtemps que je me prenais d'envie de me faire mon propre site qui reflèterais mes passion et tout le travail que j'ai réalisé. Après avoir réalisé un prototype assez basique en WordPress pour un projet de cours je me suis donné le défi d'enfin réaliser ce projet avec une librairie que j'aime beaucoup : React. C'est un projet que j'ai pris énormément de plaisir à réaliser, il ressemble vraiment au rendu que je m'imaginais et j'en suis fier. C'est également mon premier projet qui reflète ce que j'ai pu apprendre par moi même avec cette librairie.",
         "github" : "https://github.com/Redeltaz/Portofio"
     },
     {
@@ -14,7 +14,7 @@
     {
         "name": "Thème Kook's",
         "logos" : ["wordpress", "javascript"],
-        "description" : "A l'issue de la Bourse à Projet de mon école, nous étions en relation avec un véritable client et nous devions répondre à ses besoins de manière agile. Le client, CEO de la startup Kook's nous a demandé de lui réaliser un site e-commerce pour vendre ses produits, je m'en suis occupé en réalisant un thème WordPress from scratch. Il nous a également demandé d'embellir son site vitrine en y ajoutant des animation 3D, je me suis occupé de cette partie à l'aide de la bibliothèque ThreeJS.",
+        "description" : "A l'issue de la Bourse à Projet de mon école, nous étions en relation avec un véritable client et nous devions répondre à ses besoins de manière agile. Le client, CEO de la startup Kook's nous a demandé de lui réaliser un site e-commerce pour vendre ses produits, je m'en suis occupé en réalisant un thème WordPress de 0. Il nous a également demandé d'embellir son site vitrine en y ajoutant des animation 3D, je me suis également occupé de cette partie à l'aide de la bibliothèque ThreeJS.",
         "github" : "https://github.com/Redeltaz/kooks-wp_theme"
     },
     {

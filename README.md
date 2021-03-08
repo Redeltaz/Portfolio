@@ -1,3 +1,5 @@
 ## Portfolio Redeltaz
 
-stack: React
+Portfolio using React
+
+`lucaspistron.fr`

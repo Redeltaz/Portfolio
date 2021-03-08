@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react'
-import {Route, BrowserRouter as Router, Link} from 'react-router-dom'
+import {Route, HashRouter as Router, Link} from 'react-router-dom'
 import {Projects} from '../../pages/Projects/Projects'
 import {Home} from '../../pages/Home/Home'
 import {Contact} from '../../pages/Contact/Contact'
