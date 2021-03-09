@@ -131,16 +131,6 @@
     }
 }
 
-@media (min-height: 850px) {
-    .presentationContent .left {
-        padding-top: 150px;
-    }
-
-    .presentationContent .right{
-        margin-top: 15%;
-    }
-}
-
 @media (max-height: 700px) {
     .presentationContent .right{
         margin-top: 25px;

@@ -41,7 +41,7 @@ export function AboutMe(){
             <div className="leftContent">
                 <p>{'<AboutMe'}</p>
                 <span className="arguments">
-                    <p>fullName = "Lucas.C"</p>
+                    <p>firstName = "Lucas"</p>
                     <p>age = 19</p>
                     <p>passion = "javascript"</p>
                     <div>
@@ -64,10 +64,10 @@ export function Presentation(){
                     <div className="right">
                         <div className="rightContent">
                             <h1>Salut !</h1>
-                            <p>Moi c'est Lucas je suis actuellement en 2ème année dans un bachelor Développement Web à l'IIM, je suis un jeune homme 
-                                passioné par la programmation, notamment le Javascript. Je préfère le backend mais je reste tout de même polyvalent 
+                            <p>Comme écrit ci-dessus, moi c'est Lucas je suis actuellement en 2ème année dans un bachelor Développement Web à l'IIM, je suis un jeune homme 
+                                passionné par la programmation, notamment le Javascript. Je préfère le backend mais je reste tout de même polyvalent 
                                 en maîtrisant certaines technologies frontend. Je suis également très intéressé par les outils devops (Docker, Kubernetes, GCP...) 
-                                dans l'espoir de bien les maîtriser un jour pour être le plus polyvalent possible!
+                                dans l'espoir de bien les maîtriser un jour pour être le plus polyvalent possible !
                             </p>
                         </div>
                         <div className="rightLine"></div>
