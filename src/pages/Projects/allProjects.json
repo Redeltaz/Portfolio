@@ -18,7 +18,7 @@
         "github" : "https://github.com/Redeltaz/kooks-wp_theme"
     },
     {
-        "name": "App Payement",
+        "name": "App Paiement",
         "logos" : ["angular", "firebase"],
         "description" : "A la suite d'une demande de stage, j'ai pu prendre contact avec la startup Rumble Studio et, afin de valider mon niveau et m'a capacité à assimiler rapidement des connaissances, ils m'ont demandé de réaliser une petite application avec diverses fonctionnalités en Angular pour le front et Firebase pour le back (je n'avais aucune connaissance de ces technologies), le tout en comptant l'apprentissage a été réalisé en 3 jours.",
         "github" : "https://github.com/Redeltaz/rumble-studio-test-intern"
